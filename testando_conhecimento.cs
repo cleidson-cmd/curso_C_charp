@@ -29,11 +29,11 @@ class app{
         lucro = (valorcompra * taxaporcento) / 100;
         precoproduto = valorcompra + lucro;
 
-        Console.WriteLine("produto..............:{0, 15}", produto);
-        Console.WriteLine("investido............:{0, 15:c}", valorcompra);
-        Console.WriteLine("taxa de lucro........:{0, 15:p}", taxaporcento);
-        Console.WriteLine("valor do produto.....:{0, 15:c}", precoproduto);
-        Console.WriteLine("lucro................:{0, 15:c}", lucro);
+        Console.WriteLine("produto...............:{0, 15}", produto);
+        Console.WriteLine("Comprado por..........:{0, 15:c}", valorcompra);
+        Console.WriteLine("taxa de lucro.........:{0, 15:p}", taxaporcento);
+        Console.WriteLine("valor a ser repassado.:{0, 15:c}", precoproduto);
+        Console.WriteLine("lucro.................:{0, 15:c}", lucro);
         
 
 
