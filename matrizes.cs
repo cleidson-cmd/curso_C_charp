@@ -4,11 +4,9 @@ class aula17{
 
        int[,] n = new int[3,5];// uma virgla no int[,]  e no new int[qtd_linha, qud_colunas] ex: new int[3,5]
 
-       //int[] num = new int[3] {11, 22, 33}; // criando array com valores
+       //int[] num = new int[3, 5] {11, 22, 33}, {12,13,14}, {23, 24, 25}; // criando matriz com valores
 
-      // int[] number = {1, 2, 3};//criando array sem especificar quantos indices ele vai ter nesse caso ficou com 3 indices
-                                //nesse caso pode adcionar os valores sem se preocupar com quantidade de indice
-      // string[] veiculos = new string[6];
+       // string[] veiculos = new string[6];
        
        n[0, 0] = 011; // inserindo na linha 0 coluna 0
        n[0, 1] = 022; // inserindo na linha 0 coluna 1
