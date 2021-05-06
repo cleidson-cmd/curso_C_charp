@@ -1,6 +1,6 @@
 using System;
 
-class aula14{
+class aula13{
 
     static void Main(){
         int n1, n2, n3, n4, res;
