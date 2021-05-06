@@ -1,7 +1,7 @@
 using System;
 class aula17{
     static void Main(){
-       int n1, n2, n3, n4, n5;
+       //int n1, n2, n3, n4, n5;
        int[] n = new int[5];// iniciando array vazia
 
        int[] num = new int[3] {11, 22, 33}; // criando array com valores
