@@ -1,6 +1,6 @@
 using System;
 
-class aula15{
+class aula14{
     static void Main(){
         int tempo =0;
         char escolha= ' ';
