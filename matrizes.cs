@@ -1,5 +1,5 @@
 using System;
-class aula17{
+class aula16{
     static void Main(){
 
        int[,] n = new int[3,5];// uma virgla no int[,]  e no new int[qtd_linha, qud_colunas] ex: new int[3,5]
