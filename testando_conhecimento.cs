@@ -2,46 +2,102 @@ using System;
 
 class app{
     static void Main(){
-        string produto;
-        double valorcompra; 
-        double lucro;
-        double precoproduto;
-        double taxaporcento;
+        
+        inicio:
 
+        int[,] registros = new int[5, 5];
+
+        string nome_produto;
+        double valor_pago_pelo_produto; 
+        double lucro;
+        double preco_produto;
+        double taxa_porcento;
+        char opcao;
+
+     
+
+        Console.Clear();
         //informe nome do produto
         Console.WriteLine("Nome do Produto:");
-        produto = Console.ReadLine();
+        nome_produto = Console.ReadLine();
 
 
 
         //informe o valor pago do produto unitario
         Console.WriteLine("quanto pagou no produto:");
-        valorcompra = double.Parse(Console.ReadLine());
+        valor_pago_pelo_produto = double.Parse(Console.ReadLine());
+
+        if (valor_pago_pelo_produto != ){
+            Console.WriteLine("valor dev ser do tipo numerico\ntentar novament?[s] [n]");
+            opcao = Console.ReadLine();
+
+            switch(opcao){
+                case "s":
+                case "S":
+                    goto inicio;
+                    break;
 
 
+                case "n":
+                case "N":
+                    Console.WriteLine("fim do programa!");
+                    break;
+            }
+
+
+        }
 
 
 
         //quanto porcento quer ganhar emcima desse valor pago no prduto
         Console.WriteLine("porcentagem a ser adicionada em cima do valor:");
-        taxaporcento = double.Parse(Console.ReadLine());
+        taxa_porcento = double.Parse(Console.ReadLine());
 
-        lucro = (valorcompra * taxaporcento) / 100;
-        precoproduto = valorcompra + lucro;
+        //taxa de porcentagem
+        lucro = taxa_porcento * valor_pago_pelo_produto / 100;
 
-        Console.WriteLine("produto...............:{0, 15}", produto);
-        Console.WriteLine("Comprado por..........:{0, 15:c}", valorcompra);
-        Console.WriteLine("taxa de lucro.........:{0, 15:p}", taxaporcento);
-        Console.WriteLine("valor a ser repassado.:{0, 15:c}", precoproduto);
-        Console.WriteLine("lucro.................:{0, 15:c}", lucro);
+        
+        //preço do produto com a taxa em cima
+        preco_produto = valor_pago_pelo_produto + lucro;
         
 
+        Console.WriteLine("Nome do produto.........:{0, 15:c}", nome_produto);
+        Console.WriteLine("Custo do produto........:{0, 15:c}", valor_pago_pelo_produto);
+        Console.WriteLine("porcentagem de acrecimo.:{0, 15:}%", taxa_porcento);
+        Console.WriteLine("valor de revenda........:{0, 15:c}", preco_produto);
+        Console.WriteLine("lucro em dinheiro.......:{0, 15:c}", lucro);
+
+
+        Console.WriteLine("deseja continuar? [s] [n]");
+        opcao = char.Parse(Console.ReadLine());
+
+        switch(opcao){
+            case 's':
+            case 'S':
+                 goto inicio;
+                 break;
+
+            case 'n':
+            case 'N':
+                Console.Clear();
+                Console.Write("fim do programa!");
+                break;
+
+            default:
+
+                Console.WriteLine("nenhuma das opçoes esperada");
+                break;
+
+        }
+
+       
 
 
 
 
 
-        //valor que o produto sera vendido com a taxa  em % em cima    
+
+        
     
         
     
