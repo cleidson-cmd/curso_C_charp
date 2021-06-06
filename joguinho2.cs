@@ -22,13 +22,14 @@ class players
 
         object[] TodosPlayers = new object[4];
         var NomeJogador = "";//variavel que pegao nome do ogador
+     
         
         for (int i = 0; i <= 3; i++){
             Console.WriteLine("Qual Nome do Jogador?");
             NomeJogador = Console.ReadLine();
             Players jogador = new Players(NomeJogador);
 
-            TodosPlayers[i] = jogador.Nome;
+            TodosPlayers[i] = jogador.Nome + jogador.energia + jogador.life;
             
             Console.WriteLine(TodosPlayers[i]);
             //Console.Clear();
@@ -104,6 +105,8 @@ class players
             Console.Clear();
 
         } */
+
+
     }
 
 
