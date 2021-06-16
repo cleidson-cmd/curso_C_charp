@@ -25,13 +25,36 @@ class players
      
         
         for (int i = 0; i <= 3; i++){
+            inicio:
             Console.WriteLine("Qual Nome do Jogador?");
             NomeJogador = Console.ReadLine();
             Players jogador = new Players(NomeJogador);
-
-            TodosPlayers[i] = jogador.Nome + jogador.energia + jogador.life;
+            Console.Clear();
+            TodosPlayers[i] = "\nNome     " + jogador.Nome +"\nEnergia  "+ jogador.energia +"\nVida:    "+ jogador.life;
             
             Console.WriteLine(TodosPlayers[i]);
+
+            Console.WriteLine("Adcionar outro jogador? [y][n]");
+            char op = char.Parse(Console.ReadLine());
+            switch(op){
+                case 'y':
+                    goto inicio;
+                    
+                case 'Y':
+                    goto inicio;
+                    
+
+                case 'n':
+                    break;
+                
+                case 'N':
+                    break;
+                
+                //default:
+                   // Console.WriteLine("Opçao invalida");
+
+            }
+            
             //Console.Clear();
         }
 
