@@ -5,14 +5,20 @@ public class Jogadores
     public string Nome;
     public int life = 100;
     public bool vivo = true;
+
+    public void getNomeOld(string name){
+        string nomeOld = name;
+    }
 }
 
-
-
-class play
+class play : Jogadores
 {
     static void Main()
     {
+        inicio:
+        Console.Clear();
+        
+        var n = "";//guarda a resposta d jogador se quer jogar novamente
 
 
         var NomeJogador = "";//variavel que pegao nome do ogador
@@ -51,8 +57,27 @@ class play
 
             if (tentativa == NumSorteado)
             {
-                Console.WriteLine("acertou! parabens");
-                Console.WriteLine("Tentativas {0}",tentativas);
+                Console.WriteLine("parabens {0}, acertou!", jogador.Nome);
+                Console.WriteLine("Tentativas Perdidas: {0}",tentativas);
+                novamente:
+                Console.WriteLine("============================");
+                Console.WriteLine("==Continuar Jogando? [y,n]==");
+                Console.WriteLine("============================");
+                n = Console.ReadLine();
+                if (n == "y" || n == "Y")
+                {
+                    goto inicio;
+                }else if (n == "n" || n == "N"){
+                    Console.Clear();
+                    Console.WriteLine("Jogo Emcerrado!\npress Enter");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.WriteLine("Valor digitado Invalido");
+                    goto novamente;
+                }
+
                 break;
 
             }
@@ -61,8 +86,9 @@ class play
                 Console.WriteLine("========================================");
                 Console.WriteLine("Errou!");
                 jogador.life -= 25;
-                Console.WriteLine("perdeu: 25% de vida\nvida atual: {0}", jogador.life);
+                Console.WriteLine("Vida Perdida: -25%\nvida atual: {0}%", jogador.life);
                 tentativas += 1;
+                
 
                 if (jogador.life == 25){
                     Console.WriteLine("========================================");
@@ -75,6 +101,23 @@ class play
                 {
                     jogador.vivo = false;
                     Console.WriteLine("{0} Perdeu!", jogador.Nome);
+                    Console.WriteLine("============================");
+                Console.WriteLine("==Continuar Jogando? [y,n]==");
+                Console.WriteLine("============================");
+                n = Console.ReadLine();
+                if (n == "y" || n == "Y")
+                {
+                    goto inicio;
+                }else if (n == "n" || n == "N"){
+                    Console.Clear();
+                    Console.WriteLine("Jogo Emcerrado!\npress Enter");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.WriteLine("Valor digitado Invalido");
+                    goto inicio;
+                }
                     break;
                 }
 
@@ -87,9 +130,6 @@ class play
             Console.WriteLine("==Continuar==");
             Console.ReadKey();
             Console.Clear();
-
         }
     }
-
-
 }
