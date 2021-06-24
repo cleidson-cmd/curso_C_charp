@@ -69,10 +69,10 @@ class app{
         
         //guardando as variaveis em uma matriz=======================
         registros[0,0] = nome_produto;
-        registros[0,1] = string.Parse(valor_pago_pelo_produto);
-        registros[0,2] = (string)taxa_porcento;
-        registros[0,3] = preco_produto;
-        registros[0,4] = lucro;
+        registros[0,1] = Convert.ToString(valor_pago_pelo_produto);
+        registros[0,2] = Convert.ToString(taxa_porcento);
+        registros[0,3] = Convert.ToString(preco_produto);
+        registros[0,4] = Convert.ToString(lucro);
 
 
         Console.WriteLine("nome do produto.........:{0, 15:c}", registros[0,0]);
