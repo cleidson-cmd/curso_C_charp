@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+     initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="senha">
+
+    <input type="text" id="nome">
+
+    <table>
+        <th id="nom">name</th>
+        <th id="senh">senha</th>
+    </table>
+    
+    <button id="bt" >salvar</button>
+
+    <script>
+     
+        var nome = document.getElementById('nome');
+        var senha = document.getElementById('senha');
+        var senh = document.getElementById('senh');
+        var nom = document.getElementById('nom');
+        var botao = document.getElementById('bt');
+
+
+        botao.addEventListener('click', () =>{            
+            senh.innerHTML += `<td>ola</td>`
+            nom.innerHTML += `<td>pppp</td>`
+        })
+    </script>
+</body>
+</html>
+
